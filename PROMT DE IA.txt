@@ -1,0 +1,178 @@
+Actúa como un desarrollador de software profesional especializado en aplicaciones CRUD, bases de datos SQLite y sistemas administrativos.
+
+Necesito que desarrolles una aplicación CRUD (Crear, Leer, Actualizar y Eliminar) para controlar el inventario de una pequeña empresa. La aplicación debe permitir administrar productos y registrar las entradas y salidas de mercancía mediante operaciones de compra y venta.
+
+OBJETIVO DEL SISTEMA:
+Crear un sistema administrativo de inventario que permita a una pequeña empresa controlar sus productos, registrar compras y ventas, consultar existencias y mantener actualizada la información almacenada en una base de datos SQLite.
+
+TECNOLOGÍAS:
+- Lenguaje de programación: Python.
+- Base de datos: SQLite.
+- Interfaz gráfica: Tkinter o una alternativa adecuada.
+- Arquitectura organizada y fácil de comprender.
+- El código debe ser funcional, completo y ejecutable.
+
+FUNCIONALIDADES PRINCIPALES:
+
+1. GESTIÓN DE PRODUCTOS (CRUD)
+El sistema debe permitir:
+- Agregar productos nuevos.
+- Consultar todos los productos registrados.
+- Buscar productos por nombre, código o categoría.
+- Editar la información de los productos.
+- Eliminar productos, solicitando confirmación antes de hacerlo.
+
+Cada producto debe incluir:
+- ID único.
+- Código o SKU.
+- Nombre del producto.
+- Descripción.
+- Categoría.
+- Precio de compra.
+- Precio de venta.
+- Stock disponible.
+- Stock mínimo.
+- Fecha de registro.
+
+2. REGISTRO DE COMPRAS
+El sistema debe permitir registrar las compras que realiza la empresa a sus proveedores.
+
+Al registrar una compra:
+- Seleccionar el producto.
+- Indicar la cantidad comprada.
+- Registrar el precio de compra.
+- Registrar la fecha.
+- Registrar el proveedor (opcional).
+- Aumentar automáticamente el stock del producto.
+- Guardar el movimiento en la base de datos.
+
+Ejemplo:
+Si un producto tiene 10 unidades y se compran 5, el inventario debe actualizarse a 15 unidades.
+
+3. REGISTRO DE VENTAS
+El sistema debe permitir registrar las ventas de productos a los clientes.
+
+Al registrar una venta:
+- Seleccionar el producto.
+- Indicar la cantidad vendida.
+- Registrar el precio de venta.
+- Registrar la fecha.
+- Registrar el cliente (opcional).
+- Disminuir automáticamente el stock.
+- Guardar el movimiento en la base de datos.
+
+REGLA IMPORTANTE:
+El sistema no debe permitir vender una cantidad superior al stock disponible. Debe mostrar un mensaje de error cuando no haya suficientes existencias.
+
+Ejemplo:
+Si hay 15 unidades disponibles y se venden 3, el inventario debe actualizarse a 12 unidades.
+
+4. CONTROL DE INVENTARIO
+La aplicación debe mostrar:
+- Inventario total.
+- Productos registrados.
+- Productos con stock bajo.
+- Productos sin existencias.
+- Valor estimado del inventario.
+- Historial de entradas y salidas.
+
+El stock debe actualizarse automáticamente después de cada compra o venta.
+
+5. BASE DE DATOS SQLITE
+Diseña una base de datos SQLite correctamente estructurada.
+
+Tablas sugeridas:
+- productos.
+- compras.
+- ventas.
+- movimientos_inventario.
+
+Establece relaciones entre las tablas cuando sea necesario.
+
+Requisitos:
+- Utilizar claves primarias.
+- Utilizar claves foráneas cuando corresponda.
+- Validar los datos antes de insertarlos.
+- Evitar registros duplicados por código de producto.
+- Utilizar consultas SQL parametrizadas.
+- Manejar errores de la base de datos.
+- Utilizar transacciones para que las operaciones de compra y venta actualicen el stock y registren el movimiento de forma consistente.
+
+6. INTERFAZ GRÁFICA
+Diseña una interfaz gráfica sencilla, moderna y fácil de utilizar.
+
+La interfaz debe incluir:
+- Menú principal o panel de navegación.
+- Módulo de productos.
+- Módulo de compras.
+- Módulo de ventas.
+- Módulo de inventario.
+- Módulo de historial de movimientos.
+- Botones para agregar, editar, eliminar y buscar.
+- Tablas para mostrar la información.
+- Mensajes de confirmación y error.
+
+La interfaz debe ser apropiada para una pequeña empresa y fácil de utilizar por una persona que no tenga conocimientos avanzados de programación.
+
+7. VALIDACIONES
+Implementa las siguientes validaciones:
+- No permitir campos obligatorios vacíos.
+- No permitir precios negativos.
+- No permitir cantidades menores o iguales a cero en compras y ventas.
+- No permitir códigos de productos duplicados.
+- No permitir ventas sin stock suficiente.
+- Solicitar confirmación antes de eliminar productos.
+- Mostrar mensajes claros cuando ocurra un error.
+
+8. SEGURIDAD Y CONSISTENCIA
+- Utilizar consultas parametrizadas para evitar inyecciones SQL.
+- Validar la información introducida por el usuario.
+- Mantener la consistencia entre el stock y los movimientos registrados.
+- Evitar que una operación incompleta actualice parcialmente la base de datos.
+
+9. REPORTES Y CONSULTAS
+Incluye opciones para:
+- Consultar el inventario actual.
+- Consultar el historial de compras.
+- Consultar el historial de ventas.
+- Consultar los productos con stock bajo.
+- Consultar el total de productos registrados.
+- Consultar el valor del inventario.
+
+10. ESTRUCTURA DEL PROYECTO
+Organiza el proyecto en archivos separados para facilitar su mantenimiento.
+
+Por ejemplo:
+- main.py
+- database.py
+- models.py
+- crud_productos.py
+- compras.py
+- ventas.py
+- inventario.py
+- interfaz.py
+
+Puedes modificar la estructura si consideras que existe una organización mejor, pero debes explicar la función de cada archivo.
+
+11. REQUISITOS DE ENTREGA
+Quiero que me entregues:
+
+1. Explicación general del funcionamiento del sistema.
+2. Diseño de la base de datos.
+3. Código completo de todos los archivos.
+4. Instrucciones para instalar las dependencias.
+5. Instrucciones para ejecutar el programa.
+6. Ejemplos de uso de cada módulo.
+7. Explicación de cómo se actualiza el stock después de una compra y una venta.
+8. Solución de posibles errores comunes.
+
+IMPORTANTE:
+- No entregues código incompleto ni pseudocódigo.
+- No omitas funciones esenciales.
+- El código debe estar conectado correctamente a SQLite.
+- Asegúrate de que los botones de la interfaz funcionen.
+- Verifica que el CRUD permita crear, consultar, actualizar y eliminar productos.
+- Verifica que las compras aumenten el stock y las ventas lo disminuyan.
+- Incluye comentarios en el código para facilitar su comprensión.
+- Si la respuesta es demasiado extensa, divide la entrega en partes, pero proporciona todos los archivos necesarios.
+- Prioriza que el proyecto sea funcional, organizado y adecuado para un proyecto escolar de desarrollo de software.
